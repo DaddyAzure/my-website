@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Contact Us | KComputers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -23,7 +24,7 @@
         /* --- NAVIGATION --- */
         header {
             background: #fff;
-            padding: 10px 40px; /* Adjusted padding to match Home page */
+            padding: 10px 40px; 
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
@@ -38,17 +39,21 @@
             align-items: center;
         }
 
-        /* Added Logo Image Style to match Home Page */
         .logo img {
             max-height: 80px; 
             width: auto;
             display: block;
         }
 
+        .nav-links {
+            display: flex; /* Ensure flex is set for desktop */
+            align-items: center;
+        }
+
         .nav-links a {
             margin-left: 30px;
             text-decoration: none;
-            color: #4a5568; /* Matches Home page text color */
+            color: #4a5568; 
             font-weight: 500;
             transition: color 0.3s;
         }
@@ -172,6 +177,53 @@
             color: #64748b;
             margin-top: 60px;
             border-top: 1px solid #e2e8f0;
+        }
+
+        /* =========================================
+           MOBILE RESPONSIVENESS (ADDED)
+           ========================================= */
+        @media (max-width: 768px) {
+            
+            /* 1. Stack the Navigation */
+            nav {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .nav-links {
+                margin-top: 15px;
+                flex-direction: column;
+                gap: 15px;
+                width: 100%;
+            }
+
+            .nav-links a {
+                margin-left: 0;
+                display: block;
+                font-size: 1.1rem;
+            }
+
+            /* 2. Stack the Team Grid into 1 Column */
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            /* 3. Adjust Form Padding */
+            .contact-container {
+                padding: 20px;
+                width: 100%;
+            }
+            
+            /* 4. General Spacing */
+            main {
+                padding: 20px 10px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+                margin: 40px 0 20px;
+            }
         }
     </style>
 </head>

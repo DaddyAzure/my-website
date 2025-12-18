@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Home | KComputers</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         /* --- GLOBAL & RESET --- */
@@ -44,6 +44,11 @@
             font-size: 1.5rem;
             font-weight: bold;
             color: #0a2342;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
         }
 
         .nav-links a {
@@ -164,18 +169,62 @@
             padding: 20px;
         }
 
-        /* --- RESPONSIVENESS --- */
+        /* =========================================
+           MOBILE RESPONSIVENESS (NEW ADDITION)
+           ========================================= */
+        
+        /* Tablets (max-width: 900px) */
         @media (max-width: 900px) {
             .specialties-list {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(2, 1fr); /* 2 Columns */
             }
         }
 
-        @media (max-width: 600px) {
-            .specialties-list {
-                grid-template-columns: 1fr;
+        /* Phones (max-width: 768px) */
+        @media (max-width: 768px) {
+            
+            /* 1. Header & Nav fixes */
+            nav {
+                flex-direction: column; /* Stack logo and links */
+                padding: 15px;
             }
-            .hero h1 { font-size: 2.5rem; }
+
+            .nav-links {
+                margin-top: 15px;
+                flex-direction: column; /* Stack links vertically */
+                gap: 15px;
+                width: 100%;
+            }
+
+            .nav-links a {
+                margin-left: 0;
+                font-size: 1.1rem;
+                display: block;
+                padding: 5px 0;
+            }
+
+            /* 2. Hero Section Adjustments */
+            .hero {
+                padding: 80px 20px;
+            }
+            .hero h1 { 
+                font-size: 2.2rem; /* Smaller Font */
+            }
+
+            /* 3. Grid to Single Column */
+            .specialties-list {
+                grid-template-columns: 1fr; /* 1 Column */
+                gap: 30px;
+            }
+            
+            /* 4. General Padding Fixes */
+            section {
+                padding: 50px 20px;
+            }
+            
+            .text-content {
+                text-align: left; /* Easier to read on mobile */
+            }
         }
     </style>
 </head>
