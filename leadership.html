@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us | KComputers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* --- GLOBAL RESET & FONTS --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* --- NAVIGATION --- */
+        header {
+            background: #fff;
+            padding: 10px 40px; /* Adjusted padding to match Home page */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Added Logo Image Style to match Home Page */
+        .logo img {
+            max-height: 80px; 
+            width: auto;
+            display: block;
+        }
+
+        .nav-links a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: #4a5568; /* Matches Home page text color */
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #5bc0de;
+        }
+
+        .nav-links a.active { 
+            color: #00b4d8; 
+            font-weight: 700;
+        }
+
+        /* --- LAYOUT --- */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #0a2342;
+            margin: 60px 0 30px;
+        }
+
+        /* --- TEAM GRID --- */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .team-member {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            border-bottom: 4px solid #00b4d8;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .avatar-placeholder {
+            width: 120px;
+            height: 120px;
+            background-color: #e2e8f0;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+            font-size: 0.9rem;
+            border: 2px dashed #cbd5e1;
+        }
+
+        .team-member h3 { margin: 0 0 5px; color: #0a2342; }
+        .role { color: #00b4d8; font-weight: bold; font-size: 0.95rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .bio-text { font-size: 0.95rem; color: #64748b; }
+
+        /* --- CONTACT FORM --- */
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 5px solid #0a2342;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #0a2342;
+            font-weight: 600;
+        }
+
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .btn-submit {
+            background-color: #00b4d8;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: #0096c7;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #64748b;
+            margin-top: 60px;
+            border-top: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="1631423848130.jpeg" alt="K Computers Logo">
+            </a>
+            
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="leadership.html" class="active">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2 class="section-title">Heads of Departments</h2>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="avatar-placeholder">Photo</div>
+                    <h3>Jane Doe</h3>
+                    <p class="role">Chief Technology Officer</p>
+                    <p class="bio-text">Oversees all technical strategy and infrastructure development.</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="avatar-placeholder">Photo</div>
+                    <h3>John Smith</h3>
+                    <p class="role">Director of Operations</p>
+                    <p class="bio-text">Ensures smooth delivery of remote infrastructure management services.</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="avatar-placeholder">Photo</div>
+                    <h3>Sarah Lee</h3>
+                    <p class="role">Head of Sales</p>
+                    <p class="bio-text">Leading client acquisition and partnership strategies.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title">Contact Our Leadership</h2>
+            
+            <div class="contact-container">
+                <form action="/submit-contact" method="POST">
+                    
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="name@company.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 KComputers Inc. | Established 1996</p>
+    </footer>
+
+</body>
+</html>
