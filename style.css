@@ -1,11 +1,21 @@
-
 :root {
+    /* Main Headings */
+    --primary-color: #0c4a6e;   /* Deep Ocean Blue */
     
-    --primary-color: #0a2342;   
-    --accent-color: #00b4d8;    
-    --secondary-bg: #e8f1f5;    
-    --dark-bg: #0f172a;         
-    --text-color: #2c3e50;      
+    /* Buttons, Links, Logo */
+    --accent-color: #22c55e;    /* Vibrant Emerald Green */
+    
+    /* Secondary section background */
+    --secondary-bg: #bae6fd;    /* Light Sky Blue */
+    
+    /* Header and Footer background */
+    --dark-bg: #1e3a8a;         /* Strong Royal Blue */
+    
+    /* Standard Text */
+    --text-color: #334155;      /* Slate Blue-Grey */
+    
+    /* Main Page Background */
+    --main-bg: #f0f9ff;         /* Very Light Alice Blue */
 }
 
 body {
@@ -13,13 +23,14 @@ body {
     margin: 0;
     padding: 0;
     color: var(--text-color);
+    /* Added the light blue background here */
+    background-color: var(--main-bg); 
     line-height: 1.8; 
     font-size: 18px;  
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
-
 
 header {
     background-color: var(--dark-bg);
@@ -39,13 +50,13 @@ nav {
 .logo {
     font-size: 1.8rem;
     font-weight: 800; 
-    color: var(--accent-color);
+    color: var(--accent-color); /* Now Green */
     text-decoration: none;
     letter-spacing: 1px;
 }
 
 .nav-links a {
-    color: #cbd5e1;
+    color: #e2e8f0; /* Lightened text for better contrast on royal blue */
     text-decoration: none;
     margin-left: 25px;
     font-weight: 500;
@@ -54,14 +65,12 @@ nav {
 }
 
 .nav-links a:hover, .nav-links a.active {
-    color: var(--accent-color);
+    color: var(--accent-color); /* Hover turns Green */
 }
-
 
 main {
     flex: 1;
 }
-
 
 section {
     padding: 80px 20px;
@@ -78,10 +87,9 @@ h2.section-title {
     letter-spacing: 1px;
 }
 
-
 .btn {
-    background-color: var(--accent-color);
-    color: var(--primary-color);
+    background-color: var(--accent-color); /* Green Button */
+    color: #ffffff; /* White text on green button */
     padding: 15px 35px;
     text-decoration: none;
     border-radius: 4px;
@@ -95,20 +103,18 @@ h2.section-title {
 
 .btn:hover {
     background-color: white;
-    color: var(--accent-color);
-    box-shadow: 0 0 15px var(--accent-color); 
+    color: var(--accent-color); /* Green text on hover */
+    box-shadow: 0 0 15px var(--accent-color); /* Green glow */
 }
 
-
 footer {
-    background-color: var(--dark-bg);
-    color: #94a3b8;
+    background-color: var(--dark-bg); /* Royal Blue */
+    color: #cbd5e1;
     text-align: center;
     padding: 40px 20px;
     margin-top: auto;
     font-size: 1rem;
 }
-
 
 .product-grid, .team-grid {
     display: grid;
