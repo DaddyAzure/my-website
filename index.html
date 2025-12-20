@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* --- GLOBAL & RESET --- */
+        
         * {
             box-sizing: border-box;
             margin: 0;
@@ -22,7 +22,7 @@
         a { text-decoration: none; }
         ul { list-style: none; }
 
-        /* --- NAVIGATION --- */
+        
         header {
             background: white;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
@@ -61,7 +61,7 @@
             color: #00b4d8;
         }
 
-        /* --- HERO SECTION --- */
+        
         .hero {
             text-align: center;
             padding: 140px 20px;
@@ -96,7 +96,7 @@
             background-color: #0096c7;
         }
 
-        /* --- SECTIONS COMMON --- */
+        
         section {
             padding: 80px 20px;
         }
@@ -115,7 +115,7 @@
             font-size: 1.15rem;
         }
 
-        /* --- SPECIALTIES GRID --- */
+        
         .specialties-section {
             background-color: #f1f5f9; 
         }
@@ -161,7 +161,7 @@
             margin-bottom: 20px;
         }
 
-        /* --- FOOTER --- */
+        
         footer {
             background: #0a2342;
             color: white;
@@ -169,29 +169,29 @@
             padding: 20px;
         }
 
-        /* =========================================
-           MOBILE RESPONSIVENESS (NEW ADDITION)
-           ========================================= */
         
-        /* Tablets (max-width: 900px) */
+        
+        
+        
+        
         @media (max-width: 900px) {
             .specialties-list {
-                grid-template-columns: repeat(2, 1fr); /* 2 Columns */
+                grid-template-columns: repeat(2, 1fr); 
             }
         }
 
-        /* Phones (max-width: 768px) */
+        
         @media (max-width: 768px) {
             
-            /* 1. Header & Nav fixes */
+            
             nav {
-                flex-direction: column; /* Stack logo and links */
+                flex-direction: column; 
                 padding: 15px;
             }
 
             .nav-links {
                 margin-top: 15px;
-                flex-direction: column; /* Stack links vertically */
+                flex-direction: column;
                 gap: 15px;
                 width: 100%;
             }
@@ -203,27 +203,27 @@
                 padding: 5px 0;
             }
 
-            /* 2. Hero Section Adjustments */
+            
             .hero {
                 padding: 80px 20px;
             }
             .hero h1 { 
-                font-size: 2.2rem; /* Smaller Font */
+                font-size: 2.2rem; 
             }
 
-            /* 3. Grid to Single Column */
+            
             .specialties-list {
-                grid-template-columns: 1fr; /* 1 Column */
+                grid-template-columns: 1fr;
                 gap: 30px;
             }
             
-            /* 4. General Padding Fixes */
+            
             section {
                 padding: 50px 20px;
             }
             
             .text-content {
-                text-align: left; /* Easier to read on mobile */
+                text-align: left; 
             }
         }
     </style>

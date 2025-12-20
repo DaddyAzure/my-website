@@ -1,11 +1,11 @@
-/* style.css - The "Tech Pro" Design */
+
 :root {
-    /* New Palette: Deep Navy & Electric Cyan */
-    --primary-color: #0a2342;   /* Dark Navy (Motherboard dark) */
-    --accent-color: #00b4d8;    /* Electric Cyan (LED light) */
-    --secondary-bg: #e8f1f5;    /* Very light cool gray */
-    --dark-bg: #0f172a;         /* Almost black */
-    --text-color: #2c3e50;      /* Dark Charcoal (Softer than black) */
+    
+    --primary-color: #0a2342;   
+    --accent-color: #00b4d8;    
+    --secondary-bg: #e8f1f5;    
+    --dark-bg: #0f172a;         
+    --text-color: #2c3e50;      
 }
 
 body {
@@ -13,18 +13,18 @@ body {
     margin: 0;
     padding: 0;
     color: var(--text-color);
-    line-height: 1.8; /* Increased line spacing for readability */
-    font-size: 18px;  /* Increased base font size */
+    line-height: 1.8; 
+    font-size: 18px;  
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* Navigation */
+
 header {
     background-color: var(--dark-bg);
     padding: 1.2rem 0;
-    border-bottom: 3px solid var(--accent-color); /* Techy underline */
+    border-bottom: 3px solid var(--accent-color); 
 }
 
 nav {
@@ -38,14 +38,14 @@ nav {
 
 .logo {
     font-size: 1.8rem;
-    font-weight: 800; /* Extra bold */
+    font-weight: 800; 
     color: var(--accent-color);
     text-decoration: none;
     letter-spacing: 1px;
 }
 
 .nav-links a {
-    color: #cbd5e1; /* Light grey text */
+    color: #cbd5e1;
     text-decoration: none;
     margin-left: 25px;
     font-weight: 500;
@@ -57,28 +57,28 @@ nav {
     color: var(--accent-color);
 }
 
-/* Main Content Wrapper */
+
 main {
     flex: 1;
 }
 
-/* Common Section Styles */
+
 section {
-    padding: 80px 20px; /* More breathing room */
+    padding: 80px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 h2.section-title {
     text-align: center;
-    font-size: 2.8rem; /* Larger headings */
+    font-size: 2.8rem; 
     margin-bottom: 50px;
     color: var(--primary-color);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-/* Modern Tech Button */
+
 .btn {
     background-color: var(--accent-color);
     color: var(--primary-color);
@@ -96,10 +96,10 @@ h2.section-title {
 .btn:hover {
     background-color: white;
     color: var(--accent-color);
-    box-shadow: 0 0 15px var(--accent-color); /* Glowing effect */
+    box-shadow: 0 0 15px var(--accent-color); 
 }
 
-/* Footer */
+
 footer {
     background-color: var(--dark-bg);
     color: #94a3b8;
@@ -109,7 +109,7 @@ footer {
     font-size: 1rem;
 }
 
-/* Grids for other pages */
+
 .product-grid, .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));

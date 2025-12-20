@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* --- GLOBAL RESET & FONTS --- */
+        
         * {
             box-sizing: border-box;
             margin: 0;
@@ -21,7 +21,7 @@
             line-height: 1.6;
         }
 
-        /* --- NAVIGATION --- */
+        
         header {
             background: #fff;
             padding: 10px 40px; 
@@ -46,7 +46,7 @@
         }
 
         .nav-links {
-            display: flex; /* Ensure flex is set for desktop */
+            display: flex;
             align-items: center;
         }
 
@@ -67,7 +67,7 @@
             font-weight: 700;
         }
 
-        /* --- LAYOUT --- */
+        
         main {
             max-width: 1200px;
             margin: 0 auto;
@@ -81,7 +81,7 @@
             margin: 60px 0 30px;
         }
 
-        /* --- TEAM GRID --- */
+        
         .team-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -121,7 +121,7 @@
         .role { color: #00b4d8; font-weight: bold; font-size: 0.95rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
         .bio-text { font-size: 0.95rem; color: #64748b; }
 
-        /* --- CONTACT FORM --- */
+        
         .contact-container {
             max-width: 600px;
             margin: 0 auto;
@@ -170,7 +170,7 @@
             background-color: #0096c7;
         }
 
-        /* --- FOOTER --- */
+        
         footer {
             text-align: center;
             padding: 40px;
@@ -179,12 +179,12 @@
             border-top: 1px solid #e2e8f0;
         }
 
-        /* =========================================
-           MOBILE RESPONSIVENESS (ADDED)
-           ========================================= */
+        
+        
+        
         @media (max-width: 768px) {
             
-            /* 1. Stack the Navigation */
+            
             nav {
                 flex-direction: column;
                 padding: 15px;
@@ -203,19 +203,19 @@
                 font-size: 1.1rem;
             }
 
-            /* 2. Stack the Team Grid into 1 Column */
+            
             .team-grid {
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
 
-            /* 3. Adjust Form Padding */
+            
             .contact-container {
                 padding: 20px;
                 width: 100%;
             }
             
-            /* 4. General Spacing */
+            
             main {
                 padding: 20px 10px;
             }
