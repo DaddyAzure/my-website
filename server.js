@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const nodemailer = require('nodemailer'); // Import the email tool
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 // --- MIDDLEWARE ---
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -28,7 +28,7 @@ app.post('/submit-contact', async (req, res) => {
     // 1. Configure the "Transporter" (The mailman)
     const transporter = nodemailer.createTransport({
         host: 'smtp.gmail.com', // Explicitly connecting to Google
-        port: 2525,              // This is the secure SSL port
+        port: 456,              // This is the secure SSL port
         secure: true,           // Use SSL
         auth: {
             user: process.env.EMAIL_USER,
