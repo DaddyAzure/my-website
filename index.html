@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Home | KComputers</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        
+        /* --- GLOBAL STYLES --- */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -17,12 +18,15 @@
         body {
             color: #4a5568;
             line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         a { text-decoration: none; }
         ul { list-style: none; }
 
-        
+        /* --- HEADER & NAV --- */
         header {
             background: white;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
@@ -34,7 +38,7 @@
         nav {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 15px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -48,20 +52,21 @@
 
         .nav-links {
             display: flex;
-            align-items: center;
+            gap: 25px;
         }
 
         .nav-links a {
-            margin-left: 30px;
             color: #4a5568;
             font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s;
         }
 
-        .nav-links a.active {
+        .nav-links a:hover, .nav-links a.active {
             color: #00b4d8;
         }
 
-        
+        /* --- HERO --- */
         .hero {
             text-align: center;
             padding: 140px 20px;
@@ -90,13 +95,14 @@
             border-radius: 5px;
             font-weight: bold;
             transition: background 0.3s;
+            display: inline-block;
         }
 
         .btn:hover {
             background-color: #0096c7;
         }
 
-        
+        /* --- SECTIONS --- */
         section {
             padding: 80px 20px;
         }
@@ -115,7 +121,7 @@
             font-size: 1.15rem;
         }
 
-        
+        /* --- SPECIALTIES --- */
         .specialties-section {
             background-color: #f1f5f9; 
         }
@@ -134,17 +140,14 @@
             border-bottom: 5px solid #00b4d8;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
-            
             font-weight: 700;
             color: #0a2342;
             font-size: 1.1rem;
-            
             min-height: 220px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
@@ -161,70 +164,27 @@
             margin-bottom: 20px;
         }
 
-        
+        /* --- FOOTER --- */
         footer {
             background: #0a2342;
             color: white;
             text-align: center;
             padding: 20px;
+            margin-top: auto;
         }
 
-        
-        
-        
-        
-        
+        /* --- RESPONSIVE --- */
         @media (max-width: 900px) {
-            .specialties-list {
-                grid-template-columns: repeat(2, 1fr); 
-            }
+            .specialties-list { grid-template-columns: repeat(2, 1fr); }
+            nav { flex-direction: column; gap: 15px; }
+            .nav-links { width: 100%; justify-content: center; }
         }
 
-        
         @media (max-width: 768px) {
-            
-            
-            nav {
-                flex-direction: column; 
-                padding: 15px;
-            }
-
-            .nav-links {
-                margin-top: 15px;
-                flex-direction: column;
-                gap: 15px;
-                width: 100%;
-            }
-
-            .nav-links a {
-                margin-left: 0;
-                font-size: 1.1rem;
-                display: block;
-                padding: 5px 0;
-            }
-
-            
-            .hero {
-                padding: 80px 20px;
-            }
-            .hero h1 { 
-                font-size: 2.2rem; 
-            }
-
-            
-            .specialties-list {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-            
-            
-            section {
-                padding: 50px 20px;
-            }
-            
-            .text-content {
-                text-align: left; 
-            }
+            .hero h1 { font-size: 2.2rem; }
+            .specialties-list { grid-template-columns: 1fr; gap: 30px; }
+            .section-title { font-size: 2rem; }
+            .nav-links { flex-direction: column; gap: 10px; }
         }
     </style>
 </head>
@@ -235,6 +195,7 @@
             <a href="index.html" class="logo">KComputers</a>
             <div class="nav-links">
                 <a href="index.html" class="active">Home</a>
+                <a href="products.html">Products</a>
                 <a href="leadership.html">Contact Us</a>
             </div>
         </nav>
@@ -265,59 +226,13 @@
             <p style="text-align: center; margin-bottom: 50px; font-size: 1.2rem;">We provide end-to-end implementations and customized services:</p>
             
             <ul class="specialties-list">
-                <li onclick="alert('Network Solutions details...')">
-                    <i class="fas fa-network-wired"></i>
-                    Network Infrastructure Solutions
-                </li>
-                
-                <li onclick="alert('Server Solutions details...')">
-                    <i class="fas fa-server"></i>
-                    Compute Servers Infrastructure Solutions
-                </li>
-                
-                <li onclick="alert('Storage Solutions details...')">
-                    <i class="fas fa-database"></i>
-                    Storage Infrastructure Solutions
-                </li>
-                
-                <li onclick="alert('Remote Management details...')">
-                    <i class="fas fa-globe"></i>
-                    Remote Infrastructure Management Services
-                </li>
-                
-                <li onclick="alert('System Integration details...')">
-                    <i class="fas fa-cogs"></i>
-                    System Integration
-                </li>
-                
-                <li onclick="alert('Virtualization details...')">
-                    <i class="fas fa-cloud"></i>
-                    Virtualization Solutions
-                </li>
-                
-                <li onclick="alert('Data Center details...')">
-                    <i class="fas fa-building"></i>
-                    Building Data Centers
-                </li>
-                
-                <li onclick="alert('Turnkey details...')">
-                    <i class="fas fa-key"></i>
-                    Turnkey Solutions
-                </li>
+                <li onclick="alert('Network details...')"><i class="fas fa-network-wired"></i> Network Infrastructure</li>
+                <li onclick="alert('Server details...')"><i class="fas fa-server"></i> Compute Servers</li>
+                <li onclick="alert('Storage details...')"><i class="fas fa-database"></i> Storage Infrastructure</li>
+                <li onclick="alert('Remote details...')"><i class="fas fa-globe"></i> Remote Management</li>
+                <li onclick="alert('System details...')"><i class="fas fa-cogs"></i> System Integration</li>
+                <li onclick="alert('Cloud details...')"><i class="fas fa-cloud"></i> Virtualization</li>
             </ul>
-        </section>
-
-        <section>
-            <h2 class="section-title">Our Commitment</h2>
-            <div class="text-content">
-                <p>
-                    As part of our infrastructure services, K Computers helps optimize the performance of your IT Infrastructure and manage end-to-end implementations.
-                </p>
-                <br>
-                <p>
-                    We ensure the quality of processes and project deliverables, delivering superior customized services to clients across different geographies.
-                </p>
-            </div>
         </section>
     </main>
 
