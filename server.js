@@ -28,7 +28,7 @@ app.post('/submit-contact', async (req, res) => {
     // 1. Configure the "Transporter" (The mailman)
     const transporter = nodemailer.createTransport({
         host: 'smtp.gmail.com', // Explicitly connecting to Google
-        port: 465,              // This is the secure SSL port
+        port: 2525,              // This is the secure SSL port
         secure: true,           // Use SSL
         auth: {
             user: process.env.EMAIL_USER,
